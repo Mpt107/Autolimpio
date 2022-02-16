@@ -13,36 +13,103 @@
 </head>
 <body>
     <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Autolimpio</a>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading1">First</a>
+            <a class="nav-link" href="#scrollspyHeading1">Datos del cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+            <a class="nav-link" href="#scrollspyHeading2">Datos del Vehiculo</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-              <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-            </ul>
-          </li>
-        </ul>
+         </ul>
       </nav>
+
+    
       <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <h4 id="scrollspyHeading1">First heading</h4>
-        <p>...</p>
-        <h4 id="scrollspyHeading2">Second heading</h4>
-        <p>...</p>
-        <h4 id="scrollspyHeading3">Third heading</h4>
-        <p>...</p>
-        <h4 id="scrollspyHeading4">Fourth heading</h4>
-        <p>...</p>
-        <h4 id="scrollspyHeading5">Fifth heading</h4>
-        <p>...</p>
+        <h4 class="text-center" id="scrollspyHeading1">Formulario datos del cliente</h4>
+        
+
+<div class="container">
+
+       <div class="input-group mb-3 mt-3">
+          <span class="input-group-text">Nombre y apellido</span>
+          <input type="text" aria-label="First name" class="form-control">
+          <input type="text" aria-label="Last name" class="form-control">
+        </div>
+     
+
+        <div class="input-group mb-3 ">
+          <span class="input-group-text">Rut</span>
+          <input type="number" id="rut" aria-label="Rut" class="form-control">&nbsp;-&nbsp;
+          <input type="text"id=dv aria-label="dv" class="form-control">
+        </div>
+
+      
+        <div class="input-group mb-3 ">
+          <span class="input-group-text" id="basic-addon1">Direccion</span>
+          <input type="text" class="form-control" placeholder="" aria-label="Direccion" aria-describedby="basic-addon1">
+        </div>
+       
+
+        <select class="form-select mb-3" aria-label="Default select example">
+          <option selected>Comuna</option>
+          <option value="1">Las condes</option>
+          <option value="2">Vitacura</option>
+          <option value="3">Santiago</option>
+          <option value="4">Nuñoa</option>
+          <option value="5">Providencia</option>
+        </select>
+
+      </div> 
+   
+
+        <h4 class="text-center" id="scrollspyHeading2">Datos del Vehiculo</h4>
+
+        <div class="container">
+      
+        <select class="form-select mb-3 mt-3 " aria-label="Default select example">
+          <option selected>Seleccione, Tipo de vehiculo</option>
+          <option value="1">Furgon</option>
+          <option value="2">Automovil</option>
+          <option value="3">Camion</option>
+          <option value="4">Camioneta</option>
+          <option value="5">Moto</option>
+        </select>
+  
+            
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Marca</span>
+          <input type="text" class="form-control" placeholder="" aria-label="Marca" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Modelo</span>
+          <input type="text" class="form-control" placeholder="" aria-label="Modelo" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Año</span>
+          <input type="number" class="form-control" placeholder="" aria-label="Año" aria-describedby="basic-addon1">
+        </div>
+        Revision tecnica ¿esta al dia?
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Si
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+            NO
+          </label>
+        </div>
+</div>
+        </div>
+
+
+
+        
       </div>
 
 
