@@ -1,0 +1,23 @@
+{
+  "name": "autolimpio",
+  "version": "1.0.0",
+  "description": "Una empresa de lavado de autos llamada AutoLimpio, requiere un sistema que permita la creación de Órdenes de Trabajo de los servicios que presta la empresa. Este documento considera:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mpt107/Autolimpio.git"
+  },
+  "author": "Marcela Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mpt107/Autolimpio/issues"
+  },
+  "homepage": "https://github.com/Mpt107/Autolimpio#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  }
+}
