@@ -32,6 +32,7 @@
         
 
 <div class="container">
+  <form id="formprincipal" action="index.html" >
 
        <div class="input-group mb-3 mt-3">
           <span class="input-group-text">Nombre y apellido</span>
@@ -62,12 +63,12 @@
           <option value="Providencia">Providencia</option>
         </select>
 
-      </div> 
+      
    
 
         <h4 class="text-center" id="parte2">Datos del Vehiculo</h4>
 
-        <div class="container">
+        
       
         <select class="form-select mb-3 mt-3 " aria-label="Default select example">
           <option selected> Tipo de vehiculo</option>
@@ -106,13 +107,14 @@
             No
           </label>
         </div>
-        </div>
-
-        <div class="container">
-
+      </form>  
+    <div id="error"></div>
+    <button type="submit">Submit</button>
+        <br>
+        <br>
           Seleccione tipo de lavado:
-          <form action="index.html">
-            
+          <form id= form action="index.html">
+
               <div class="form-check mb-3">
                   <input class="form-check-input" type="checkbox" value="7000" id="lavadoExterior">
                   <label class="form-check-label" for="lavadoExterior">
@@ -127,18 +129,12 @@
                   </label>
                 </div>
                  
-                <select class="form-select mb-3 mt-3 " aria-label="Default select example">
-                  <option selected>  Seleccione su prestador de servicios:</option>
-                  <option value="Sr1">Sr1</option>
-                  <option value="Sr2">Sr2</option>
-                  <option value="Sr3">Sr3</option>
-                  <option value="Sr4">Sr4</option>
-                </select>
+               
   
-                <button id="btnCalcular" onclick="displayDate()" type="button"  btn btn-primary>Calcular</button>
+                <button id="btnCalcular"  onclick="displayDate()"  type="button"  btn btn-primary>Calcular</button>
   
   
-          <div class="row">
+           <div class="row">
               <div class="col-1">Neto</div>
               <div id="neto" class="col-2">$</div>
               <div class="col-1">IVA</div>
@@ -148,26 +144,31 @@
               
           </div>
 
+<br>
 
+           
 
+            <form id="selectencargado" action="">
 
+            <select id="encargado"  class="form-select mb-3 mt-3 " aria-label="Default select example">
+              <option selected>  Seleccione su prestador de servicios:</option>
+              <option value="Mateo Gonzales">Mateo Gonzales </option>
+              <option value="Tomas Muñoz">Tomas Muñoz</option>
+              <option value="Lucas Rojas">Lucas Rojas</option>
+              
+            </select>
 
-            <p id="mostrarfecha"></p>
+          
 
+               <div id="messages"></div>
 
+              <p id="mostrarfecha"></p>
+              </form>
+        
 
-        </form> 
-      </div>
-
-
-
-
-
-
-
-
-
-
+</form> 
+     
+</div>
         </div>
 
 

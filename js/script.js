@@ -2,7 +2,6 @@ const boton = document.getElementById("btnCalcular");
 boton.addEventListener("click", () => {
 
 
-
     const lavadoExterior    = $("#lavadoExterior").prop("checked");
 
     const lavadoMotor       = $("#lavadoMotor").prop("checked");
@@ -30,16 +29,19 @@ boton.addEventListener("click", () => {
 });
 
 
-
-
-
-
-
-
-
-
 function displayDate(){
     document.getElementById("mostrarfecha").innerHTML = Date();
    
 
 }
+
+
+
+let encargado = document.getElementById("encargado");
+encargado.addEventListener("change", function() {
+    console.log(encargado.value)
+
+   
+     document.getElementById("messages").innerHTML =("su prestador de servicios fue:" + encargado.value)
+   
+});
