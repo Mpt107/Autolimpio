@@ -13,34 +13,36 @@
 </head>
 <body>
     <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-        <a class="navbar-brand" href="#">Autolimpio</a>
+        <a class="navbar-brand" >
+          <img src="img/logo.png" alt="logo" >
+        </a>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading1">Datos del cliente</a>
+            <a class="nav-link" href="#parte1">Datos del cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Datos del Vehiculo</a>
+            <a class="nav-link" href="#parte2">Datos del Vehiculo</a>
           </li>
          </ul>
       </nav>
 
     
       <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <h4 class="text-center" id="scrollspyHeading1">Formulario datos del cliente</h4>
+        <h4 class="text-center" id="parte1">Formulario datos del cliente</h4>
         
 
 <div class="container">
 
        <div class="input-group mb-3 mt-3">
           <span class="input-group-text">Nombre y apellido</span>
-          <input type="text" aria-label="First name" class="form-control">
-          <input type="text" aria-label="Last name" class="form-control">
+          <input type="text" aria-label="nombre" class="form-control">
+          <input type="text" aria-label="apellido" class="form-control">
         </div>
      
 
         <div class="input-group mb-3 ">
           <span class="input-group-text">Rut</span>
-          <input type="number" id="rut" aria-label="Rut" class="form-control">&nbsp;-&nbsp;
+          <input type="text" id="rut" aria-label="Rut" class="form-control">&nbsp;-&nbsp;
           <input type="text"id=dv aria-label="dv" class="form-control">
         </div>
 
@@ -53,27 +55,27 @@
 
         <select class="form-select mb-3" aria-label="Default select example">
           <option selected>Comuna</option>
-          <option value="1">Las condes</option>
-          <option value="2">Vitacura</option>
-          <option value="3">Santiago</option>
-          <option value="4">Nuñoa</option>
-          <option value="5">Providencia</option>
+          <option value="Las condes">Las condes</option>
+          <option value="Vitacura">Vitacura</option>
+          <option value="Santiago">Santiago</option>
+          <option value="Nunoa">Nuñoa</option>
+          <option value="Providencia">Providencia</option>
         </select>
 
       </div> 
    
 
-        <h4 class="text-center" id="scrollspyHeading2">Datos del Vehiculo</h4>
+        <h4 class="text-center" id="parte2">Datos del Vehiculo</h4>
 
         <div class="container">
       
         <select class="form-select mb-3 mt-3 " aria-label="Default select example">
-          <option selected>Seleccione, Tipo de vehiculo</option>
-          <option value="1">Furgon</option>
-          <option value="2">Automovil</option>
-          <option value="3">Camion</option>
-          <option value="4">Camioneta</option>
-          <option value="5">Moto</option>
+          <option selected> Tipo de vehiculo</option>
+          <option value="Furgon">Furgon</option>
+          <option value="Automovil">Automovil</option>
+          <option value="Camion">Camion</option>
+          <option value="Camioneta">Camioneta</option>
+          <option value="Moto">Moto</option>
         </select>
   
             
@@ -89,28 +91,89 @@
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Año</span>
-          <input type="number" class="form-control" placeholder="" aria-label="Año" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="" aria-label="Año" aria-describedby="basic-addon1">
         </div>
         Revision tecnica ¿esta al dia?
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="Si">
+          <label class="form-check-label" for="Si">
             Si
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-          <label class="form-check-label" for="flexRadioDefault2">
-            NO
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="No">
+          <label class="form-check-label" for="No">
+            No
           </label>
         </div>
-</div>
+        </div>
+
+        <div class="container">
+
+          Seleccione tipo de lavado:
+          <form action="index.html">
+            
+              <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="7000" id="lavadoExterior">
+                  <label class="form-check-label" for="lavadoExterior">
+                    Lavado Exterior $7.000.-
+                  </label>
+                </div>
+      
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="5000" id="lavadoMotor">
+                  <label class="form-check-label" for="lavadoMotor">
+                      Lavado Motor $5.000.-
+                  </label>
+                </div>
+                 
+                <select class="form-select mb-3 mt-3 " aria-label="Default select example">
+                  <option selected>  Seleccione su prestador de servicios:</option>
+                  <option value="Sr1">Sr1</option>
+                  <option value="Sr2">Sr2</option>
+                  <option value="Sr3">Sr3</option>
+                  <option value="Sr4">Sr4</option>
+                </select>
+  
+                <button id="btnCalcular" onclick="displayDate()" type="button"  btn btn-primary>Calcular</button>
+  
+  
+          <div class="row">
+              <div class="col-1">Neto</div>
+              <div id="neto" class="col-2">$</div>
+              <div class="col-1">IVA</div>
+              <div id="iva" class="col-2">$</div>
+              <div class="col-1">TOTAL</div>
+              <div id="total" class="col-2">$</div>
+              
+          </div>
+
+
+
+
+
+            <p id="mostrarfecha"></p>
+
+
+
+        </form> 
+      </div>
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
 
         
-      </div>
+      
 
 
 
