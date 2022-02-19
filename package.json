@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Mpt107/Autolimpio#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "bootstrap": "^5.1.3",
     "jquery": "^3.6.0"
   }
