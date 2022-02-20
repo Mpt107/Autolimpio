@@ -1,0 +1,46 @@
+
+#form{
+    padding: 1em;
+background-color: rgba(91, 89, 97, 0.5);
+margin-left: 1cm;
+margin-right: 1cm;
+border-radius: 20px;
+
+}
+
+#carouselExampleDark img {
+   
+    max-block-size: 450px;
+    object-fit: cover;
+}
+#formlavado{
+
+    background-color: rgba(107, 104, 110, 0.616);
+    padding: 1em;
+    margin-left: 1cm;
+margin-right: 1cm;
+border-radius: 20px;
+}
+
+#selectencargado{
+padding: 1em;
+background-color: rgba(89, 86, 98, 0.678);
+margin-left: 1cm;
+margin-right: 1cm;
+border-radius: 20px;
+}
+
+html body{
+    background-color: rgb(5, 5, 2);
+}
+
+.col-2{
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{
+    max-height: 3cm;
+}
+.tablapago{
+    padding: 0.5em;
+}

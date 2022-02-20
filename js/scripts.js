@@ -5,7 +5,7 @@ document.getElementById("nombre").addEventListener("blur", (evento) => {
     const txtnombre = input.value;
   
     const feedbacknombre = document.getElementById("feedback-nombre");
-    expr = /^[a-zA-Z\_\-]{4,30}$/;
+    expr = /^[a-zA-Z\s]{4,30}$/;
     if (!expr.test(txtnombre)) {
       feedbacknombre.innerHTML = "Solo debe tener letras y debe tener entre 4 y 30 caracteres.";
       input.classList.remove("is-valid");
@@ -26,7 +26,7 @@ document.getElementById("apellido").addEventListener("blur", (evento) => {
   const txtapellido = input.value;
 
   const feedbackapellido = document.getElementById("feedback-apellido");
-  expr = /^[a-zA-Z\_\-]{4,30}$/;
+  expr = /^[a-zA-Z\s]{4,30}$/;
   if (!expr.test(txtapellido)) {
     feedbackapellido.innerHTML = "debe tener entre 4 y 30 caracteres.";
     input.classList.remove("is-valid");
@@ -85,7 +85,7 @@ document.getElementById("direccion").addEventListener("blur", (evento) => {
   const txtdireccion = input.value;
 
   const feedbackdireccion = document.getElementById("feedback-direccion");
-  expr = /^[a-zA-Z\_\-]{4,80}$/;
+  expr = /^[a-zA-Z\s]{4,80}$/;
   if (!expr.test(txtdireccion)) {
     feedbackdireccion.innerHTML = "debe tener como minimo 4 maximo 80 caracteres";
     input.classList.remove("is-valid");
@@ -104,7 +104,7 @@ document.getElementById("marca").addEventListener("blur", (evento) => {
   const txtmarca = input.value;
 
   const feedbackmarca = document.getElementById("feedback-marca");
-  expr = /^[a-zA-Z\_\-]{4,20}$/;
+  expr = /^[a-zA-Z\s]{4,20}$/;
   if (!expr.test(txtmarca)) {
     feedbackmarca.innerHTML = "debe contener minimo 4 y maximo 40 caracteres.";
     input.classList.remove("is-valid");
@@ -123,7 +123,7 @@ document.getElementById("modelo").addEventListener("blur", (evento) => {
   const txtmodelo = input.value;
 
   const feedbackmodelo = document.getElementById("feedback-modelo");
-  expr = /^[a-zA-Z\_\-]{4,20}$/;
+  expr = /^[a-zA-Z\s]{4,20}$/;
   if (!expr.test(txtmodelo)) {
     feedbackmodelo.innerHTML = "debe contener entre 4 y 20 caracteres.";
     input.classList.remove("is-valid");
@@ -155,4 +155,55 @@ document.getElementById("ano").addEventListener("blur", (evento) => {
     input.classList.add("is-valid");
     feedbackano.className = "valid-feedback";
   }
+});
+
+
+// tipo de lavado
+
+const boton = document.getElementById("btnCalcular");
+boton.addEventListener("click", () => {
+
+
+    const lavadoExterior    = $("#lavadoExterior").prop("checked");
+
+    const lavadoMotor       = $("#lavadoMotor").prop("checked");
+
+    let montoNeto           = 0;
+
+    if( lavadoExterior ) {
+        montoNeto = montoNeto + 7000;
+    }
+
+    if( lavadoMotor ) {
+        montoNeto = montoNeto + 5000;
+    }
+
+    const impuesto  = montoNeto * 0.19;
+    const total     = montoNeto + impuesto;
+
+    
+
+
+
+    document.getElementById("neto").innerHTML   = `<span>$ ${montoNeto}</span>`;
+    document.getElementById("iva").innerHTML    = `<span>$ ${impuesto}</span>`;
+    document.getElementById("total").innerHTML  = `<span>$ ${total}</span>`;
+});
+
+
+//encargado y fecha
+let encargado = document.getElementById("encargado");
+encargado.addEventListener("change", function() {
+    console.log(encargado.value)
+
+        document.getElementById("messages").innerHTML =("Hola "+nombre.value+" "+apellido.value +" su prestador de servicios fue: " + encargado.value)
+
+   
+});
+document.getElementById("encargado").addEventListener("change", (evento) => {
+let date = new Date()
+let n = date.toDateString();
+let time = date.toLocaleTimeString();
+
+document.getElementById("mostrarfecha").innerHTML=(n , time)
 });
